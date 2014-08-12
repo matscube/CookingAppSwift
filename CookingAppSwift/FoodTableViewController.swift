@@ -8,8 +8,27 @@
 
 import UIKit
 
+let CELL_HEIGHT:CGFloat = 70
+
 class FoodTableViewController: UITableViewController {
 
+    let CELL_IDENTIFIER:String = "CELL"
+    
+    required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        super.init(nibName: nibName, bundle: nibBundleOrNil)
+    }
+    
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
+
+        self.tableView.registerClass(FoodTableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+//        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,24 +49,34 @@ class FoodTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+//        return 10
+        return 10
     }
 
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+//        return 3
+        return 3
+    }
+    
+    override func tableView(tableView: UITableView!, titleForHeaderInSection section: Int) -> String! {
+        return "Food:\(section)"
     }
 
-    /*
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
+//        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath) as FoodTableViewCell
+        
         // Configure the cell...
+
 
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return CELL_HEIGHT
+    }
 
     /*
     // Override to support conditional editing of the table view.
