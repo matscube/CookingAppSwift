@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		21B9643B199A860F00F05CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9643A199A860F00F05CA4 /* AppDelegate.swift */; };
 		21B9643D199A860F00F05CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9643C199A860F00F05CA4 /* ViewController.swift */; };
-		21B96440199A860F00F05CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B9643E199A860F00F05CA4 /* Main.storyboard */; };
 		21B96442199A860F00F05CA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21B96441199A860F00F05CA4 /* Images.xcassets */; };
 		21B9644E199A860F00F05CA4 /* CookingAppSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9644D199A860F00F05CA4 /* CookingAppSwiftTests.swift */; };
+		21B96458199A89EF00F05CA4 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B96457199A89EF00F05CA4 /* FoodTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +29,11 @@
 		21B96439199A860F00F05CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21B9643A199A860F00F05CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21B9643C199A860F00F05CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		21B9643F199A860F00F05CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21B96441199A860F00F05CA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		21B96447199A860F00F05CA4 /* CookingAppSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingAppSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B9644C199A860F00F05CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21B9644D199A860F00F05CA4 /* CookingAppSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingAppSwiftTests.swift; sourceTree = "<group>"; };
+		21B96457199A89EF00F05CA4 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +77,9 @@
 			children = (
 				21B9643A199A860F00F05CA4 /* AppDelegate.swift */,
 				21B9643C199A860F00F05CA4 /* ViewController.swift */,
-				21B9643E199A860F00F05CA4 /* Main.storyboard */,
 				21B96441199A860F00F05CA4 /* Images.xcassets */,
 				21B96438199A860F00F05CA4 /* Supporting Files */,
+				21B96457199A89EF00F05CA4 /* FoodTableViewController.swift */,
 			);
 			path = CookingAppSwift;
 			sourceTree = "<group>";
@@ -189,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21B96440199A860F00F05CA4 /* Main.storyboard in Resources */,
 				21B96442199A860F00F05CA4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21B9643D199A860F00F05CA4 /* ViewController.swift in Sources */,
+				21B96458199A89EF00F05CA4 /* FoodTableViewController.swift in Sources */,
 				21B9643B199A860F00F05CA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,17 +230,6 @@
 			targetProxy = 21B96448199A860F00F05CA4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		21B9643E199A860F00F05CA4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21B9643F199A860F00F05CA4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		21B9644F199A860F00F05CA4 /* Debug */ = {
