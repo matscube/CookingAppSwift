@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         var initialViewController:UIViewController = ViewController()
-        initialViewController = FoodTableViewController()
+        initialViewController = FoodTableViewController(style: UITableViewStyle.Plain)
         
         self.window!.rootViewController = initialViewController
         
