@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        var initialViewController:UIViewController = ViewController()
-        initialViewController = FoodTableViewController(style: UITableViewStyle.Plain)
+        var initialViewController:UIViewController = FoodTableViewController()
+//        initialViewController = FoodTableViewController(style: UITableViewStyle.Plain)
+        
         
         self.window!.rootViewController = initialViewController
         
