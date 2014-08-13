@@ -33,9 +33,9 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView!, viewForHeaderInSection section: Int) -> UIView! {
         println("section: \(section)")
         
-        var sectionView = UIView(frame: CGRectMake(0, 0, self.frame.width, self.frame.height))
+        var sectionView = UIView(frame: CGRectMake(0, 0, self.frame.width, 30))
         
-        var sectionLabel = UILabel(frame: CGRectMake(10, 0, sectionView.frame.width - 10, sectionView.frame.height))
+        var sectionLabel = UILabel(frame: CGRectMake(10, 0, sectionView.frame.width - 10, 30))
         sectionLabel.text = "Food: \(section)"
 
         sectionLabel.backgroundColor = UIColor.grayColor()
@@ -50,13 +50,17 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView!, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
-    
-    override func numberOfRowsInSection(section: Int) -> Int {
-        return 10
+
+    func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+        return 5
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return 3
+    }
+    
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return 20
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
