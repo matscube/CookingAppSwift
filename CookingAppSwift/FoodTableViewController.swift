@@ -15,7 +15,33 @@ class FoodTableViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        self.createBottomToolBar()
         self.createFoodTableView()
+    }
+    
+    func createBottomToolBar() {
+        let width = self.view.frame.width
+        let height = self.view.frame.height
+        
+        var addButton = UIButton(frame: CGRectMake(width / 2, height - 50, width / 2, 50))
+        addButton.addTarget(self, action: "addFood:", forControlEvents: UIControlEvents.TouchDown)
+        addButton.setTitle("Add Food", forState: UIControlState.Normal)
+        addButton.backgroundColor = UIColor.greenColor()
+        addButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
+        self.view.addSubview(addButton)
+    }
+    
+    func addFood(sender:AnyObject) {
+        
+        let y:CGFloat = 100
+        let height:CGFloat = self.view.bounds.height / 3 * 2
+        
+//        var addFoodTableView = AddFoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height), style: UITableViewStyle.Plain)
+        var addFoodTableView = AddFoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height))
+        
+        self.view.addSubview(addFoodTableView)
+        
     }
 
     override func didReceiveMemoryWarning() {
