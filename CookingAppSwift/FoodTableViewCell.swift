@@ -20,7 +20,7 @@ class FoodTableViewCell: UITableViewCell {
     }
     
     func setDefaultStyle() {
-        
+/*
         let WIDTH = self.frame.width
         let HEIGHT = CELL_HEIGHT
 
@@ -36,6 +36,7 @@ class FoodTableViewCell: UITableViewCell {
         var foodDescription = UILabel(frame: CGRectMake(10, HEIGHT / 3 * 2, WIDTH, HEIGHT / 3))
         foodDescription.text = "First ..., Second ..."
         self.contentView.addSubview(foodDescription)
+*/
     }
     
     override func awakeFromNib() {
