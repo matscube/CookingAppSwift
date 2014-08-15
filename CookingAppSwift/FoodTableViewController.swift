@@ -30,18 +30,30 @@ class FoodTableViewController: UIViewController {
         addButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         
         self.view.addSubview(addButton)
+        
+        var listButton = UIButton(frame: CGRectMake(0, height - 50, width / 2, 50))
+        listButton.addTarget(self, action: "viewFoodList:", forControlEvents: UIControlEvents.TouchDown)
+        listButton.setTitle("Food List", forState: UIControlState.Normal)
+        listButton.backgroundColor = UIColor.orangeColor()
+        listButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
+        self.view.addSubview(listButton)
     }
     
     func addFood(sender:AnyObject) {
-        
         let y:CGFloat = 100
         let height:CGFloat = self.view.bounds.height / 3 * 2
-        
-//        var addFoodTableView = AddFoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height), style: UITableViewStyle.Plain)
         var addFoodTableView = AddFoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height))
         
         self.view.addSubview(addFoodTableView)
+    }
+    
+    func viewFoodList(sender:AnyObject) {
+        let y:CGFloat = 100
+        let height:CGFloat = self.view.bounds.height / 3 * 2
+        var foodTableView = FoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height), style: UITableViewStyle.Plain)
         
+        self.view.addSubview(foodTableView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +70,7 @@ class FoodTableViewController: UIViewController {
         
         self.view.addSubview(foodTableView)
     }
-
+    
     /*
     // MARK: - Navigation
 
