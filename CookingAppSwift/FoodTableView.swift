@@ -62,13 +62,15 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         return 20
     }
-    
+
+    // TODO : send data to detailview
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         let row = indexPath.row
-        let foodDetailView = FoodDetailView()
+        let foodDetailView = FoodDetailView(frame: CGRectMake(0, 0, 200, 200))
         self.addSubview(foodDetailView)
     }
     
+    // TODO : fix cell design
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         //        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath) as UITableViewCell
         let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath) as FoodTableViewCell
