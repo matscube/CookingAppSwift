@@ -19,6 +19,10 @@ class FoodTableViewController: UIViewController {
         self.createFoodTableView()
     }
     
+    func changeView(view:UIView) {
+        self.view.addSubview(view)
+    }
+    
     func createBottomToolBar() {
         let width = self.view.frame.width
         let height = self.view.frame.height

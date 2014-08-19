@@ -14,6 +14,7 @@
 		21B9645E199BACF800F05CA4 /* FoodTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B9645D199BACF800F05CA4 /* FoodTableView.swift */; };
 		21B96462199BAD9400F05CA4 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B96461199BAD9400F05CA4 /* FoodTableViewController.swift */; };
 		21BDF2EE199BC4E9006E1E4F /* AddFoodTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDF2ED199BC4E9006E1E4F /* AddFoodTableView.swift */; };
+		21BDF2F019A399A0006E1E4F /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDF2EF19A399A0006E1E4F /* FoodDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		21B9645D199BACF800F05CA4 /* FoodTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableView.swift; sourceTree = "<group>"; };
 		21B96461199BAD9400F05CA4 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		21BDF2ED199BC4E9006E1E4F /* AddFoodTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodTableView.swift; sourceTree = "<group>"; };
+		21BDF2EF19A399A0006E1E4F /* FoodDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				21B9645D199BACF800F05CA4 /* FoodTableView.swift */,
 				21B96461199BAD9400F05CA4 /* FoodTableViewController.swift */,
 				21BDF2ED199BC4E9006E1E4F /* AddFoodTableView.swift */,
+				21BDF2EF19A399A0006E1E4F /* FoodDetailView.swift */,
 			);
 			path = CookingAppSwift;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				21BDF2EE199BC4E9006E1E4F /* AddFoodTableView.swift in Sources */,
 				21B9643B199A860F00F05CA4 /* AppDelegate.swift in Sources */,
 				21B96462199BAD9400F05CA4 /* FoodTableViewController.swift in Sources */,
+				21BDF2F019A399A0006E1E4F /* FoodDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
