@@ -7,13 +7,12 @@
 //
 
 import UIKit
-
-
-let CELL_HEIGHT:CGFloat = 70
+import Realm
 
 class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
 
     let CELL_IDENTIFIER:String = "CELL"
+    var items:RLMArray?
     
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -28,6 +27,7 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         self.dataSource = self
         
         
+        self.items = DBManager.sharedInstance.allFood()
     }
     
     func tableView(tableView: UITableView!, viewForHeaderInSection section: Int) -> UIView! {
@@ -56,11 +56,11 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return Int(self.items!.count)
     }
     
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        return 20
+        return CELL_HEIGHT
     }
 
     // TODO : send data to detailview
@@ -77,10 +77,25 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         
         // Configure the cell...
         
+        let row = indexPath.row
+        let item = self.items!.objectAtIndex(UInt(row)) as FoodModel
+        println(item.name)
         
-        println("cell")
+        cell.foodLabel?.text = item.name
+        cell.foodSummary?.text = item.summary
+        cell.foodTimeRequired?.text = String(item.timeRequired)
+
+        cell.tag = row
+        cell.deleteButton?.addTarget(self, action: "test:", forControlEvents: UIControlEvents.TouchDown)
         
         return cell
+    }
+    
+    func test(sender:AnyObject) {
+        let id = Int(sender.tag)
+        let item = self.items!.objectAtIndex(UInt(id)) as FoodModel
+        DBManager.sharedInstance.deleteFood(item)
+        self.reloadData()
     }
     
     /*

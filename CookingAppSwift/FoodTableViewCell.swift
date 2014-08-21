@@ -8,7 +8,14 @@
 
 import UIKit
 
+public let CELL_HEIGHT:CGFloat = 80
+
 class FoodTableViewCell: UITableViewCell {
+    
+    var foodLabel:UILabel?
+    var foodSummary:UILabel?
+    var foodTimeRequired:UILabel?
+    var deleteButton:UIButton?
 
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -20,23 +27,30 @@ class FoodTableViewCell: UITableViewCell {
     }
     
     func setDefaultStyle() {
-/*
+
         let WIDTH = self.frame.width
         let HEIGHT = CELL_HEIGHT
 
 
-        var foodLabel = UILabel(frame: CGRectMake(10, 0, WIDTH, HEIGHT / 3))
-        foodLabel.text = "Cooking Name"
-        self.contentView.addSubview(foodLabel)
+        self.foodLabel = UILabel(frame: CGRectMake(10, 0, WIDTH, HEIGHT / 3))
+        self.foodLabel!.text = "Cooking Name"
+        self.contentView.addSubview(self.foodLabel!)
         
-        var foodSummary = UILabel(frame: CGRectMake(10, HEIGHT / 3, WIDTH, HEIGHT / 3))
-        foodSummary.text = "This is good foodl"
-        self.contentView.addSubview(foodSummary)
+        self.foodSummary = UILabel(frame: CGRectMake(10, HEIGHT / 3, WIDTH, HEIGHT / 3))
+        self.foodSummary!.text = "This is good foodl"
+        self.contentView.addSubview(self.foodSummary!)
 
-        var foodDescription = UILabel(frame: CGRectMake(10, HEIGHT / 3 * 2, WIDTH, HEIGHT / 3))
-        foodDescription.text = "First ..., Second ..."
-        self.contentView.addSubview(foodDescription)
-*/
+        self.foodTimeRequired = UILabel(frame: CGRectMake(10, HEIGHT / 3 * 2, WIDTH, HEIGHT / 3))
+        self.foodTimeRequired!.text = "10 minutes required"
+        self.contentView.addSubview(self.foodTimeRequired!)
+        
+        self.deleteButton = UIButton(frame: CGRectMake(WIDTH - 100, 0, 80, 30))
+        self.deleteButton!.setTitle("Delete", forState: UIControlState.Normal)
+        self.deleteButton!.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        self.deleteButton!.layer.borderWidth = 1.0
+        self.deleteButton!.layer.borderColor = UIColor.blackColor().CGColor
+        self.contentView.addSubview(self.deleteButton!)
+
     }
     
     override func awakeFromNib() {

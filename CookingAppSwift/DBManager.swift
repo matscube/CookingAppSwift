@@ -36,4 +36,31 @@ class DBManager {
         realm.commitWriteTransaction()
     }
     
+    func createFood(name:NSString, summary:NSString, timeRequired:Int) -> FoodModel {
+        var foodModel = FoodModel()
+        
+        foodModel.name = name
+        foodModel.summary = summary
+        foodModel.timeRequired = timeRequired
+        
+        
+        realm.beginWriteTransaction()
+        realm.addObject(foodModel)
+        realm.commitWriteTransaction()
+        
+        println("Create food model")
+     
+        return foodModel
+    }
+    
+    func allFood() -> RLMArray {
+        var result:RLMArray = FoodModel.allObjectsInRealm(realm)
+        return result
+    }
+    
+    func deleteFood(food:FoodModel) {
+        realm.beginWriteTransaction()
+        realm.deleteObject(food)
+        realm.commitWriteTransaction()
+    }
 }
