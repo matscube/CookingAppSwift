@@ -15,6 +15,8 @@
 		21B96462199BAD9400F05CA4 /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B96461199BAD9400F05CA4 /* FoodTableViewController.swift */; };
 		21BDF2EE199BC4E9006E1E4F /* AddFoodTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDF2ED199BC4E9006E1E4F /* AddFoodTableView.swift */; };
 		21BDF2F019A399A0006E1E4F /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDF2EF19A399A0006E1E4F /* FoodDetailView.swift */; };
+		21BDF30E19A63602006E1E4F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BDF2FD19A635AE006E1E4F /* Realm.framework */; };
+		21BDF31219A63670006E1E4F /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21BDF30119A635AE006E1E4F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +27,83 @@
 			remoteGlobalIDString = 21B96434199A860F00F05CA4;
 			remoteInfo = CookingAppSwift;
 		};
+		21BDF2FC19A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8D89B981955FC6D00CF2B9A;
+			remoteInfo = OSX;
+		};
+		21BDF2FE19A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8D89BA31955FC6D00CF2B9A;
+			remoteInfo = "OSX Tests";
+		};
+		21BDF30019A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E856D1D5195614A300FB2FCF;
+			remoteInfo = iOS;
+		};
+		21BDF30219A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E856D1DF195614A400FB2FCF;
+			remoteInfo = "iOS Tests";
+		};
+		21BDF30419A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F8DCA5719930F550008BD7F;
+			remoteInfo = "iOS Device Tests";
+		};
+		21BDF30619A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8FE4140196DBA6700073FBB;
+			remoteInfo = OSXTestFramework;
+		};
+		21BDF30819A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8CA10F9196DC18A0044F8AA;
+			remoteInfo = iOSTestFramework;
+		};
+		21BDF30A19A635AE006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F1A5E721992EB7400F45F4C;
+			remoteInfo = TestHost;
+		};
+		21BDF30C19A635C8006E1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E856D1D4195614A300FB2FCF;
+			remoteInfo = iOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21BDF30F19A63628006E1E4F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				21BDF31219A63670006E1E4F /* Realm.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		21B96435199A860F00F05CA4 /* CookingAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +118,7 @@
 		21B96461199BAD9400F05CA4 /* FoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		21BDF2ED199BC4E9006E1E4F /* AddFoodTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodTableView.swift; sourceTree = "<group>"; };
 		21BDF2EF19A399A0006E1E4F /* FoodDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
+		21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Realm-Xcode6.xcodeproj"; path = "../realm-cocoa/Realm-Xcode6.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BDF30E19A63602006E1E4F /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +143,7 @@
 		21B9642C199A860F00F05CA4 = {
 			isa = PBXGroup;
 			children = (
+				21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */,
 				21B96437199A860F00F05CA4 /* CookingAppSwift */,
 				21B9644A199A860F00F05CA4 /* CookingAppSwiftTests */,
 				21B96436199A860F00F05CA4 /* Products */,
@@ -118,6 +199,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		21BDF2F219A635AD006E1E4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21BDF2FD19A635AE006E1E4F /* Realm.framework */,
+				21BDF2FF19A635AE006E1E4F /* OSX Tests.xctest */,
+				21BDF30119A635AE006E1E4F /* Realm.framework */,
+				21BDF30319A635AE006E1E4F /* iOS Tests.xctest */,
+				21BDF30519A635AE006E1E4F /* iOS Device Tests.xctest */,
+				21BDF30719A635AE006E1E4F /* TestFramework.framework */,
+				21BDF30919A635AE006E1E4F /* TestFramework.framework */,
+				21BDF30B19A635AE006E1E4F /* TestHost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,10 +224,12 @@
 				21B96431199A860F00F05CA4 /* Sources */,
 				21B96432199A860F00F05CA4 /* Frameworks */,
 				21B96433199A860F00F05CA4 /* Resources */,
+				21BDF30F19A63628006E1E4F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				21BDF30D19A635C8006E1E4F /* PBXTargetDependency */,
 			);
 			name = CookingAppSwift;
 			productName = CookingAppSwift;
@@ -185,6 +283,12 @@
 			mainGroup = 21B9642C199A860F00F05CA4;
 			productRefGroup = 21B96436199A860F00F05CA4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 21BDF2F219A635AD006E1E4F /* Products */;
+					ProjectRef = 21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				21B96434199A860F00F05CA4 /* CookingAppSwift */,
@@ -192,6 +296,65 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		21BDF2FD19A635AE006E1E4F /* Realm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Realm.framework;
+			remoteRef = 21BDF2FC19A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BDF2FF19A635AE006E1E4F /* OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "OSX Tests.xctest";
+			remoteRef = 21BDF2FE19A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BDF30119A635AE006E1E4F /* Realm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Realm.framework;
+			remoteRef = 21BDF30019A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BDF30319A635AE006E1E4F /* iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iOS Tests.xctest";
+			remoteRef = 21BDF30219A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BDF30519A635AE006E1E4F /* iOS Device Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "iOS Device Tests.xctest";
+			remoteRef = 21BDF30419A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BDF30719A635AE006E1E4F /* TestFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestFramework.framework;
+			remoteRef = 21BDF30619A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BDF30919A635AE006E1E4F /* TestFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestFramework.framework;
+			remoteRef = 21BDF30819A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		21BDF30B19A635AE006E1E4F /* TestHost.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TestHost.app;
+			remoteRef = 21BDF30A19A635AE006E1E4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		21B96433199A860F00F05CA4 /* Resources */ = {
@@ -240,6 +403,11 @@
 			isa = PBXTargetDependency;
 			target = 21B96434199A860F00F05CA4 /* CookingAppSwift */;
 			targetProxy = 21B96448199A860F00F05CA4 /* PBXContainerItemProxy */;
+		};
+		21BDF30D19A635C8006E1E4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOS;
+			targetProxy = 21BDF30C19A635C8006E1E4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -328,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CookingAppSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -340,6 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = CookingAppSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
