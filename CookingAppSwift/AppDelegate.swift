@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        initialViewController = FoodTableViewController(style: UITableViewStyle.Plain)
         
         DBManager.sharedInstance.increaseAppLaunchCount()
-        
+        DBManager.sharedInstance.createFood("Carry", summary: "からい", timeRequired: 10)
         
         self.window!.rootViewController = initialViewController
         

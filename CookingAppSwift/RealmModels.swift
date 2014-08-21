@@ -12,3 +12,10 @@ import Realm
 class SystemModel: RLMObject {
     dynamic var launchCount = 0
 }
+
+class FoodModel: RLMObject {
+    dynamic var name:NSString = ""
+    dynamic var summary:NSString = ""
+    dynamic var timeRequired:Int = 0
+
+}
