@@ -17,6 +17,8 @@
 		21BDF2F019A399A0006E1E4F /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDF2EF19A399A0006E1E4F /* FoodDetailView.swift */; };
 		21BDF30E19A63602006E1E4F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BDF2FD19A635AE006E1E4F /* Realm.framework */; };
 		21BDF31219A63670006E1E4F /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 21BDF30119A635AE006E1E4F /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21BDF31D19A63CED006E1E4F /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDF31C19A63CED006E1E4F /* RealmModels.swift */; };
+		21BDF31F19A63D2A006E1E4F /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDF31E19A63D2A006E1E4F /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		21BDF2ED199BC4E9006E1E4F /* AddFoodTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodTableView.swift; sourceTree = "<group>"; };
 		21BDF2EF19A399A0006E1E4F /* FoodDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
 		21BDF2F119A635AD006E1E4F /* Realm-Xcode6.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Realm-Xcode6.xcodeproj"; path = "../realm-cocoa/Realm-Xcode6.xcodeproj"; sourceTree = "<group>"; };
+		21BDF31C19A63CED006E1E4F /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		21BDF31E19A63D2A006E1E4F /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 		21B96437199A860F00F05CA4 /* CookingAppSwift */ = {
 			isa = PBXGroup;
 			children = (
+				21BDF31419A63CDA006E1E4F /* DB */,
 				21B9643A199A860F00F05CA4 /* AppDelegate.swift */,
 				21B96441199A860F00F05CA4 /* Images.xcassets */,
 				21B96438199A860F00F05CA4 /* Supporting Files */,
@@ -212,6 +217,15 @@
 				21BDF30B19A635AE006E1E4F /* TestHost.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		21BDF31419A63CDA006E1E4F /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				21BDF31C19A63CED006E1E4F /* RealmModels.swift */,
+				21BDF31E19A63D2A006E1E4F /* DBManager.swift */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +396,9 @@
 				21B9645A199A8BD500F05CA4 /* FoodTableViewCell.swift in Sources */,
 				21B9645E199BACF800F05CA4 /* FoodTableView.swift in Sources */,
 				21BDF2EE199BC4E9006E1E4F /* AddFoodTableView.swift in Sources */,
+				21BDF31F19A63D2A006E1E4F /* DBManager.swift in Sources */,
 				21B9643B199A860F00F05CA4 /* AppDelegate.swift in Sources */,
+				21BDF31D19A63CED006E1E4F /* RealmModels.swift in Sources */,
 				21B96462199BAD9400F05CA4 /* FoodTableViewController.swift in Sources */,
 				21BDF2F019A399A0006E1E4F /* FoodDetailView.swift in Sources */,
 			);
