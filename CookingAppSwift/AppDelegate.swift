@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var initialViewController:UIViewController = FoodTableViewController()
 //        initialViewController = FoodTableViewController(style: UITableViewStyle.Plain)
         
+        DBManager.sharedInstance.increaseAppLaunchCount()
+        
         
         self.window!.rootViewController = initialViewController
         
