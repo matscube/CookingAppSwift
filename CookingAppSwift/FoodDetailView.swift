@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Realm
 
 class FoodDetailView: UIView {
+    
+    var width:CGFloat?
+    var height:CGFloat?
+    
+    var foodItem:FoodModel?
 
     
     // Only override drawRect: if you perform custom drawing.
@@ -17,8 +23,10 @@ class FoodDetailView: UIView {
     {
         // Drawing code
         
-        var label = UILabel(frame: CGRectMake(0, 0, 100, 100))
+        var label = UILabel(frame: CGRectMake(0, 0, self.width!, 50))
         label.backgroundColor = UIColor.greenColor()
+        label.text = self.foodItem!.name
+        label.textColor = UIColor.whiteColor()
         self.addSubview(label)
         
 
@@ -34,6 +42,9 @@ class FoodDetailView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        
+        self.width = self.frame.width
+        self.height = self.frame.height
         self.backgroundColor = UIColor.orangeColor()
     }
 
