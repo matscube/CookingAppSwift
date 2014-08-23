@@ -66,7 +66,10 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     // TODO : send data to detailview
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         let row = indexPath.row
-        let foodDetailView = FoodDetailView(frame: CGRectMake(0, 0, 200, 200))
+        let foodDetailView = FoodDetailView(frame: CGRectMake(0, 0, tableView.frame.width, tableView.frame.height))
+  
+        foodDetailView.foodItem = self.items!.objectAtIndex(UInt(row)) as FoodModel
+        
         self.addSubview(foodDetailView)
     }
     
