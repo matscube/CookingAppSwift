@@ -8,28 +8,41 @@
 
 import UIKit
 
+public let STATUS_BAR_HEIGHT:CGFloat = 22
+
 class FoodTableViewController: UIViewController {
     
+    // Style
+    let FOOTER_TOOL_BAR_HEIGHT:CGFloat = 50
+    var width:CGFloat?
+    var height:CGFloat?
+    
+    var subView:UIView?
+
+    // TODO: add common view by protocol
+    var foodTableView:FoodTableView?
+    var addFoodTableView:AddFoodTableView?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+        self.width = self.view.frame.width
+        self.height = self.view.frame.height
+        
+        self.subView = UIView(frame: CGRectMake(0, STATUS_BAR_HEIGHT, self.view.frame.width, self.view.frame.height - STATUS_BAR_HEIGHT - self.FOOTER_TOOL_BAR_HEIGHT))
+        self.subView?.backgroundColor = UIColor.brownColor()
+        self.view.addSubview(self.subView!)
         
         self.createBottomToolBar()
         self.createFoodTableView()
     }
     
-    func changeView(view:UIView) {
-        self.view.addSubview(view)
-    }
-    
     func createBottomToolBar() {
-        let width = self.view.frame.width
-        let height = self.view.frame.height
         
-        var addButton = UIButton(frame: CGRectMake(width / 2, height - 50, width / 2, 50))
+        var addButton = UIButton(frame: CGRectMake(self.width! / 2, self.height! - self.FOOTER_TOOL_BAR_HEIGHT, self.width! / 2, self.FOOTER_TOOL_BAR_HEIGHT))
         addButton.addTarget(self, action: "addFood:", forControlEvents: UIControlEvents.TouchDown)
         addButton.setTitle("Add Food", forState: UIControlState.Normal)
         addButton.backgroundColor = UIColor.greenColor()
@@ -37,7 +50,7 @@ class FoodTableViewController: UIViewController {
         
         self.view.addSubview(addButton)
         
-        var listButton = UIButton(frame: CGRectMake(0, height - 50, width / 2, 50))
+        var listButton = UIButton(frame: CGRectMake(0, self.height! - self.FOOTER_TOOL_BAR_HEIGHT, self.width! / 2, self.FOOTER_TOOL_BAR_HEIGHT))
         listButton.addTarget(self, action: "viewFoodList:", forControlEvents: UIControlEvents.TouchDown)
         listButton.setTitle("Food List", forState: UIControlState.Normal)
         listButton.backgroundColor = UIColor.orangeColor()
@@ -47,19 +60,30 @@ class FoodTableViewController: UIViewController {
     }
     
     func addFood(sender:AnyObject) {
+        self.addFoodTableView?.removeFromSuperview()
+        self.foodTableView?.removeFromSuperview()
+        
         let y:CGFloat = 100
         let height:CGFloat = self.view.bounds.height / 3 * 2
-        var addFoodTableView = AddFoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height))
+        self.addFoodTableView = AddFoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height))
         
-        self.view.addSubview(addFoodTableView)
+        self.view.addSubview(self.addFoodTableView!)
     }
     
     func viewFoodList(sender:AnyObject) {
+        self.addFoodTableView?.removeFromSuperview()
+        self.foodTableView?.removeFromSuperview()
+
+        self.createFoodTableView()
+
+    }
+    
+    func createFoodTableView() {
         let y:CGFloat = 100
         let height:CGFloat = self.view.bounds.height / 3 * 2
-        var foodTableView = FoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height), style: UITableViewStyle.Plain)
         
-        self.view.addSubview(foodTableView)
+        self.foodTableView = FoodTableView(frame: CGRectMake(0, y, self.width!, height), mainViewController: self)
+        self.subView?.addSubview(self.foodTableView!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,15 +91,7 @@ class FoodTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func createFoodTableView() {
-        let y:CGFloat = 100
-        let height:CGFloat = self.view.bounds.height / 3 * 2
-        
-//        var foodTableView = FoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height))
-        var foodTableView = FoodTableView(frame: CGRectMake(0, y, self.view.bounds.width, height), style: UITableViewStyle.Plain)
-        
-        self.view.addSubview(foodTableView)
-    }
+
     
     /*
     // MARK: - Navigation
