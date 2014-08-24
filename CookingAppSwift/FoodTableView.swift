@@ -14,21 +14,27 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     let CELL_IDENTIFIER:String = "CELL"
     var items:RLMArray?
     
+    private weak var mainViewController:FoodTableViewController?
+    
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     
-    override init(frame: CGRect, style: UITableViewStyle) {
-        println("foodtableview init")
-        super.init(frame: frame, style: style)
-        
+    
+    required init(frame: CGRect, mainViewController: FoodTableViewController) {
+//        super.init(frame: frame)
+        super.init(frame: frame, style: .Plain)
+
         self.registerClass(FoodTableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+
+        
+        self.mainViewController = mainViewController
         self.delegate = self
         self.dataSource = self
-        
-        
         self.items = DBManager.sharedInstance.allFood()
+
     }
+
     
     func tableView(tableView: UITableView!, viewForHeaderInSection section: Int) -> UIView! {
         println("section: \(section)")
@@ -66,11 +72,13 @@ class FoodTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     // TODO : send data to detailview
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         let row = indexPath.row
-        let foodDetailView = FoodDetailView(frame: CGRectMake(0, 0, tableView.frame.width, tableView.frame.height))
+        let foodDetailView = FoodDetailView(frame: CGRectMake(0, STATUS_BAR_HEIGHT, tableView.frame.width, tableView.frame.height))
   
         foodDetailView.foodItem = self.items!.objectAtIndex(UInt(row)) as FoodModel
         
-        self.addSubview(foodDetailView)
+        tableView.pu
+
+        self.mainViewController?.view.addSubview(foodDetailView)
     }
     
     // TODO : fix cell design
